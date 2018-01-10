@@ -1,0 +1,17 @@
+@mixin vertical-spacing($start, $end: null) {
+  @if $end {
+    margin-bottom: $end;
+    margin-top: $start;
+  } @else {
+    margin-bottom: $start;
+    margin-top: $start;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

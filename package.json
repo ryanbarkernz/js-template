@@ -1,0 +1,48 @@
+{
+  "name": "app-boilerplate",
+  "version": "1.0.0",
+  "description": "Simple app boilerplate with js, sass and hot reloading",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --inline --hot --open",
+    "build": "NODE_ENV=production webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.toptal.com:screening/ryan-barker.git"
+  },
+  "author": "Ryan Barker",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "^4.3.1",
+    "css-loader": "^0.28.8",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^2.30.1",
+    "imagemin-webpack-plugin": "^1.5.2",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.0.10",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.2.0-rc.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "dependencies": {
+    "webfontloader": "^1.6.28"
+  }
+}

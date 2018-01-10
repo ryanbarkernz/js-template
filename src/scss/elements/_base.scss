@@ -1,0 +1,95 @@
+//  ========================================================================
+//
+//    Artie front-end framework
+//    https://github.com/indrekpaas/Artie
+//    MIT licensed
+//
+//  ========================================================================
+
+
+//  EMBEDDED FONTS ---------------------------------------------------------
+
+// @include font-face("My Font", "../fonts/myfont");
+// @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+// @include font-face("Perfume", "/static/fonts/perfume-classic", 'woff', 400, normal);
+
+
+//  BASE TYPOGRAPHY --------------------------------------------------------
+
+html {
+  @include fluid-type(font-size, 20em, 65em, 0.875em, 1.125em);
+  background-color: darken($concrete, 2.5%);
+  color: $primary;
+  font-family: Montserrat, sans-serif;
+  font-weight: 100;
+  line-height: 1.5;
+
+  ::selection {
+    background: $mineshaft;
+    color: $white;
+    text-shadow: none;
+  }
+}
+
+body {
+  overflow-y: scroll;
+}
+
+section {
+  padding: 5em 0;
+}
+
+
+//  GLOBAL HEADINGS --------------------------------------------------------
+
+
+h1 {
+  font-size: 5em;
+  line-height: 0.8em;
+}
+
+h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2em;
+  margin-bottom: 0.8em;
+}
+
+h2 {
+  font-size: 4em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1em;
+  margin-bottom: 1.5em;
+}
+
+p {
+  font-size: 1em;
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+a:not(.Button) {
+  // color: $primary;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+small {
+  display: block;
+  font-size: 12px;
+  line-height: 1.4em;
+}

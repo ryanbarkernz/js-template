@@ -1,0 +1,12 @@
+video {
+  max-width: 100%;
+}
+
+.video--yt {
+  min-height: 50vh;
+  width: 100%;
+
+  @media (max-width: 37.4375em) {
+    min-height: 30vh;
+  }
+}

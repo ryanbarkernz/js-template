@@ -1,0 +1,72 @@
+// Default table ----------------
+
+.c-table-wrap {
+  max-width: 100%;
+  overflow-x: scroll;
+  position: relative;
+}
+
+.c-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0 0;
+}
+
+.c-table-title {
+  font-weight: 300;
+  margin: 2rem 0 0.75rem;
+  font-size: 14px;
+}
+
+
+// Default table modifier ----------------
+.c-table--default {
+  margin: 2.5em 0;
+
+  tr {
+    &:first-child {
+      td {
+        border-top: 1px solid $mercury;
+      }
+    }
+
+    td {
+      padding: 1.25em 0.75em;
+      border-bottom: 1px solid $mercury;
+
+      &:first-child { padding-left: 0; }
+      &:last-child { padding-right: 0; }
+
+      &:not(:first-child) {
+        font-weight: 300;
+        font-size: 14px;
+      }
+    }
+  }
+
+  // Stack in mobile
+  @media (max-width: 48em) {
+    display: block;
+
+    tr {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border-bottom: 1px solid $mercury;
+      padding: 1em 0;
+
+      &:first-child {
+        border-top: 1px solid $mercury;
+
+        td {
+          border: 0;
+        }
+      }
+
+      td {
+        padding: 0;
+        border: 0;
+      }
+    }
+  }
+}

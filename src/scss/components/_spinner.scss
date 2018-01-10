@@ -1,0 +1,36 @@
+.c-spinner {
+  animation: 2s linear infinite spinner-rotate;
+  transform: rotate(0);
+  width: 1.5em;
+}
+
+@keyframes spinner-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+$pi: 3.14159265359;
+$r: 11;
+$c: $pi * 2 * $r;
+
+.c-spinner circle {
+  animation: 1.5s linear infinite spinner-dash;
+  stroke-dasharray: 0, $c;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  stroke: $white;
+}
+
+@keyframes spinner-dash {
+  100% {
+    stroke-dasharray: $c, $c;
+    stroke-dashoffset: -$c;
+  }
+}
+
+/*
+<svg class="c-spinner" viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="11" fill="none" stroke-width="2" />
+</svg>
+*/

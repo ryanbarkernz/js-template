@@ -1,0 +1,63 @@
+.c-section {
+  overflow: hidden;
+}
+
+
+// Space -------------------------------
+
+.c-section--tiny {
+  @include fluid-type(padding-bottom padding-top, 22.857142857em, 57.777777778em, 2em, 4em);
+}
+
+.c-section--small {
+  @include fluid-type(padding-bottom padding-top, 22.857142857em, 57.777777778em, 2em, 6em);
+}
+
+.c-section--medium {
+  @include fluid-type(padding-bottom padding-top, 22.857142857em, 57.777777778em, 2em, 10em);
+}
+
+.c-section--large {
+  @include fluid-type(padding-bottom padding-top, 22.857142857em, 57.777777778em, 4em, 12em);
+}
+
+
+// Color -------------------------------
+
+.c-section--bg {
+  background-position: 50% 25%;
+  background-size: cover;
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+
+  &:before {
+    content: '';
+    position: absolute;
+    background: rgba($white, 0.8);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .o-container {
+    position: relative;
+  }
+}
+
+
+// Elements ----------------------------
+
+.c-section__item {
+  @include fluid-type(margin-bottom margin-top, 22.857142857em, 57.777777778em, 2em, 6em);
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
